@@ -411,7 +411,7 @@ button,input,.event-item,.btn{touch-action:manipulation;-webkit-tap-highlight-co
 
 <script>
 // ===== EmailJS =====
-emailjs.init("3A228NVyE5NVMxev8");
+window.addEventListener("load", () => emailjs.init("Y0hgw0hQjsbdC3pnP"));
 
 // ===== 競技データ =====
 const FEE = 5000;
@@ -639,7 +639,7 @@ async function submitForm() {
     `振込金額：¥${parseInt(gv('transferAmount')||'0',10).toLocaleString()}`;
 
   const params = {
-    to_email:   'jdc.chubu@gmail.com',
+    to_email:   'jdc.ama.entry@gmail.com',
     cc_email:   gv('email'),
     reply_to:   gv('email'),
     from_name:  gv('name1Kanji') + ' / ' + gv('name2Kanji'),
@@ -656,7 +656,7 @@ async function submitForm() {
   };
 
   try {
-    await emailjs.send('service_guqkzna', 'template_yjehnbv', params);
+    await emailjs.send('service_kqbq3rd', 'template_mg812of', params);
     document.getElementById('confirmView').style.display = 'none';
     document.getElementById('completeView').style.display = 'block';
     document.getElementById('step2').classList.remove('active');
