@@ -64,7 +64,7 @@ header h2{font-size:clamp(12px,2.5vw,15px);font-weight:400;opacity:.9;margin-bot
 .form-group label{display:block;font-size:13px;font-weight:700;color:var(--sub);margin-bottom:4px}
 .req{display:inline-block;background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:5px;vertical-align:middle}
 .opt{display:inline-block;background:#888;color:#fff;font-size:10px;padding:1px 6px;border-radius:3px;margin-left:5px;vertical-align:middle}
-input[type=text],input[type=email],input[type=tel],input[type=date]{width:100%;padding:9px 11px;border:1.5px solid var(--border);border-radius:6px;font-size:14px;font-family:inherit;transition:.2s;background:#fff}
+input[type=text],input[type=email],input[type=tel],input[type=number],input[type=date]{width:100%;box-sizing:border-box;padding:9px 11px;border:1.5px solid var(--border);border-radius:6px;font-size:14px;font-family:inherit;transition:.2s;background:#fff}
 input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(139,0,0,0.08)}
 input.invalid{border-color:var(--err)!important}
 .err-msg{display:none;color:var(--err);font-size:12px;margin-top:3px}
@@ -161,6 +161,9 @@ button,input,.event-item,.btn{touch-action:manipulation;-webkit-tap-highlight-co
 .warn-banner{background:linear-gradient(135deg,#fff3e0,#fff8f0);border-left:4px solid #e65100;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;line-height:1.7;color:#4e2500}
 .warn-banner strong{color:#e65100}
 .hint{font-size:11.5px;color:#7b6a8e;margin-top:3px}
+/* 振込情報：振込日・振込人名・振込金額の入力欄を同じ高さ・同じ見た目に統一 */
+.transfer-row input{height:44px;min-height:44px;padding:9px 11px;font-size:15px;line-height:1.4;border:1.5px solid var(--border);border-radius:6px;background:#fff;-moz-appearance:textfield}
+.transfer-row input[type=number]::-webkit-outer-spin-button,.transfer-row input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 </style>
 </head>
 <body>
